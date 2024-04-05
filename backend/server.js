@@ -2,7 +2,7 @@ import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
-const cors = require("cors");
+import cors from "cors";
 
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js";
@@ -12,6 +12,7 @@ import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
 
 const PORT = process.env.PORT || 5000;
+const cors = require("cors");
 
 const __dirname = path.resolve();
 
