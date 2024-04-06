@@ -12,7 +12,6 @@ import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
 
 const PORT = process.env.PORT || 5000;
-const cors = require("cors");
 
 const __dirname = path.resolve();
 
