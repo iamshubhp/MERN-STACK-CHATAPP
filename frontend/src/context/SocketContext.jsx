@@ -15,14 +15,11 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io(
-        "https://https://mern-stack-quant-production.up.railway.app/",
-        {
-          query: {
-            userId: authUser._id,
-          },
-        }
-      );
+      const socket = io("https://mern-stack-quant-3.onrender.com", {
+        query: {
+          userId: authUser._id,
+        },
+      });
       setSocket(socket);
 
       socket.on("getOnlineUsers", (users) => {
